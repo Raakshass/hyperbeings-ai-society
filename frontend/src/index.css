@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .card-hover {
+    @apply transform transition-all duration-200 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .trait-bar {
+    @apply w-full bg-gray-200 rounded-full h-2 relative overflow-hidden;
+  }
+  
+  .trait-fill {
+    @apply h-full rounded-full transition-all duration-300 ease-out;
+  }
+}
+
+/* Custom scrollbar for activity log */
+.log-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.log-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.log-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.log-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
